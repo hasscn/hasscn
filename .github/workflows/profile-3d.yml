@@ -17,8 +17,8 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
       - name: Commit & Push
         run: |
-          git config user.name hasscn
-          git config user.email hasscn@gmail.com
+          git config user.name ${{ github.repository_owner }}
+          git config user.email ${{ secrets.HASSCN_EMAIL }}
           git add -A .
           git commit -m "generated profile 3d contrib"
           git push
